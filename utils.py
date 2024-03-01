@@ -53,18 +53,18 @@ def parse_docx(docx_content):
 
 
 colors = {
-    "SKILL": "linear-gradient(90deg, #aa9cfc, #fc9ce7)",
-    "EDUC": "linear-gradient(90deg, #9BE15D, #00E3AE)",
-    "ORG": "#ffd966",
-    "EXPERIENCE": "#9fc5e8",
+    "SKILLS": "linear-gradient(90deg, #aa9cfc, #fc9ce7)",
+    "JOB TITLE": "linear-gradient(90deg, #9BE15D, #00E3AE)",
+    "ORGANIZATION": "#ffd966",
+    "EDUCATION": "#9fc5e8",
 
 }
 options = {
     "ents": [
-        "SKILL",
-        "ORG",
-        "EDUC",
-        "EXPERIENCE"
+        "JOB TITLE",
+        "SKILLS",
+        "ORGANIZATION",
+        "EDUCATION"
     ],
     "colors": colors,
 }
