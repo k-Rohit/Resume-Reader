@@ -26,6 +26,15 @@ pip install -r requirements.txt
 streamlit run main.py
 ```
 
+### Training statistics - 
+We have fine-tuned two models namely roberta-base for Named Entity Extraction and bert-base for generation of job title after getting the skills as keywords in input.
+| Model Name    | Training Time | GPU used          | Inference Speed |
+|---------------|---------------|-------------------|-----------------|
+| roberta-base  | 1 hour        | Tesla-T4 (Colab) | 9.4 seconds     |
+| bert-base     | 1 hour        | P-100 (Kaggle)    | 3.2 seconds     |
+
+
+
 ## utils.py
 This files defines a set of functions and configurations for parsing and processing text data from various formats such as PDF, DOCX, and HTML. Below is an explanation of each component:
 
