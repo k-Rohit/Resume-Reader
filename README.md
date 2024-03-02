@@ -25,7 +25,9 @@ pip install -r requirements.txt
 ```bash
 streamlit run main.py
 ```
-This code defines a set of functions and configurations for parsing and processing text data from various formats such as PDF, DOCX, and HTML. Below is an explanation of each component:
+
+## utils.py
+This files defines a set of functions and configurations for parsing and processing text data from various formats such as PDF, DOCX, and HTML. Below is an explanation of each component:
 
 ### Parsing Functions:
 
@@ -50,13 +52,6 @@ This code defines a set of functions and configurations for parsing and processi
    - Splits the text into sentences based on full stops.
    - Concatenates the sentences with a newline after each.
 
-### Additional Functionality:
-
-- **extract_sections_with_dates(resume_text):**
-  - Identifies sections within the resume text that contain dates.
-  - It uses regular expressions to match dates in the format "Month Year" or just "Year".
-  - Sections with dates are extracted along with the corresponding date range.
-
 ### Visualizations and Configuration:
 
 - **colors:** Defines a dictionary containing colors for different named entities.
@@ -71,4 +66,46 @@ This code defines a set of functions and configurations for parsing and processi
 - **spacy:** For named entity recognition and visualization.
 - **plotly:** For generating interactive visualizations like graphs and charts.
 
-Overall, this code provides a comprehensive set of functions to parse, preprocess, and visualize text data from various document formats, especially tailored for processing resumes or similar documents. It leverages popular libraries in the Python ecosystem to accomplish these tasks efficiently.
+## app.py
+
+This code defines a Streamlit application for parsing and visualizing resume data, as well as performing job searches based on extracted information. Below is an explanation of each component:
+
+### Libraries Used:
+
+- **streamlit:** Framework for building interactive web applications.
+- **spacy:** For named entity recognition and visualization.
+- **plotly:** For generating interactive visualizations like graphs and charts.
+- **pandas:** For data manipulation and analysis.
+
+### Components:
+
+1. **Introduction Page:**
+   - Displays a welcome message and an about section in the sidebar.
+   - Provides a file uploader to upload resumes in PDF, DOCX, or HTML format.
+   - Processes the uploaded file to extract entities (Job Title, Skills, etc.).
+   - Visualizes the extracted entities using spaCy's displacy module.
+
+2. **Process Uploaded File:**
+   - Parses the uploaded file based on its format (PDF, DOCX, HTML).
+   - Utilizes spaCy for named entity recognition on the parsed text.
+   - Renders the parsed text and named entities using Streamlit components.
+
+3. **Visualization Page:**
+   - Displays visualizations of extracted entities from the resume.
+   - Generates a sunburst chart using Plotly Express to visualize entity categories and values.
+
+4. **Search Jobs Page:**
+   - Allows users to search for job opportunities based on extracted skills or job titles.
+   - Users can enter a query (job title or keyword) and location for the job search.
+   - Performs a job search using predefined functions from the 'jobs' module.
+   - Logs the job search event.
+
+### Logging:
+
+- **File Logging:** Logs events such as resume upload, entity extraction, visualization, and job searches to a log file named 'resume_parser.log'.
+- Provides information about the time taken for model loading and inference.
+
+
+
+
+
