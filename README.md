@@ -12,9 +12,16 @@ Clone this repository to your local machine using the following command:
 
 ```bash
 git clone <repository-url>
+```
 
+### 2. Install the dependencies
 
+```bash
 cd resume-parser-app
 pip install -r requirements.txt
+```
 
+### 3. Run the application
+```bash
 streamlit run main.py
+```
