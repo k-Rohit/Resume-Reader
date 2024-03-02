@@ -15,9 +15,9 @@ git clone <repository-url>
 ```
 
 ### 2. Install the dependencies
-
+switch to the main directory
 ```bash
-cd resume-parser-app
+cd Resume-Reader
 pip install -r requirements.txt
 ```
 
