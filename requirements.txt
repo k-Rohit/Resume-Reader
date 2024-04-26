@@ -1,8 +1,0 @@
-streamlit==1.31.1
-spacy==3.7.4
-plotly==5.18.0
-pandas==2.2.0
-beautifulsoup4==4.12.3
-pdfplumber==0.5.28  # Assuming you're using pdfplumber for PDF parsing, adjust if using a different library
-python-docx==0.8.11  # Assuming you're using python-docx for DOCX parsing, adjust if using a different library
-serpapi==2.3.0
