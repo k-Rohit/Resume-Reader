@@ -5,7 +5,6 @@ from spacy import displacy
 import plotly.express as px
 from utils import parse_pdf, parse_docx, extract_text_from_resume, process_text, options
 import pandas as pd
-from jobs import *
 import logging
 import time
 
@@ -27,8 +26,7 @@ def intro():
     st.sidebar.info(
         '''
         This is a resume parser application that identifies the Job Title, Skills, 
-        Experience of the candidates. The application also provides you with Job search feature
-        filtered according to the job title and the location entered using Google Serp API 
+        Experience of the candidates.
         "Upload your resume in PDF, DOCX, or HTML format, and explore the extracted information
         '''
     )
@@ -111,22 +109,11 @@ def visualization(entities):
 # Define main function to manage page navigation
 def main():
     # Add a selectbox to choose the page
-    page = st.sidebar.selectbox("Select a page", ["Introduction", "Search Jobs"])
+    page = st.sidebar.selectbox("Select a page", ["Introduction"])
 
     # Render the selected page
     if page == "Introduction":
         intro()
-    elif page == "Search Jobs":
-        # Call the visualization function without passing entities
-        st.header("Job Search According to skills")
-        query = st.text_input("Enter job title or query", "Data Scientist Jobs")
-        location = st.text_input("Enter location", "Pune, India")
-
-        # Perform job search
-        if st.button("Search"):
-            search_jobs(query, location)
-            # Log job search event
-            logging.info(f"Job search performed for query: '{query}', location: '{location}'.")
 
 if __name__ == "__main__":
     main()
