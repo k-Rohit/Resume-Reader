@@ -14,7 +14,7 @@ logging.basicConfig(filename='resume_parser.log', level=logging.INFO,
 
 # Load English language model for Spacy
 start_time_load = time.time()  # Start time for model loading
-nlp = spacy.load("/workspaces/Resume-Reader/model-best-with-job-titles")
+nlp = spacy.load("model-best-with-job-titles")
 end_time_load = time.time()    # End time for model loading
 logging.info(f"Model loaded in {end_time_load - start_time_load:.2f} seconds.")
 
