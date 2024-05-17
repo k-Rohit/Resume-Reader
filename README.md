@@ -117,9 +117,13 @@ This code defines a Streamlit application for parsing and visualizing resume dat
 ## Video Demo
 
 <video width="320" height="240" controls>
-  <source src="https://github.com/k-Rohit/Resume-Reader/assets/93335681/76ff0509-c359-4b08-898b-a2091911a438.mp4" type="video/mp4">
+  <source src="https://github.com/k-Rohit/Resume-Reader/assets/93335681/d9747b68-4030-4757-9083-33b2a1a61383.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
+
+
+
 
 
 
