@@ -114,6 +114,12 @@ This code defines a Streamlit application for parsing and visualizing resume dat
 - **File Logging:** Logs events such as resume upload, entity extraction, visualization, and job searches to a log file named 'resume_parser.log'.
 - Provides information about the time taken for model loading and inference.
 
+## Video Demo
+
+<video width="320" height="240" controls>
+  <source src="https://github.com/k-Rohit/Resume-Reader/assets/93335681/76ff0509-c359-4b08-898b-a2091911a438.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
 
